@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animação Barco, Nuvem e Oceano</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: rgb(186, 238, 235);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .barco {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%) scaleX(1);
+    width: 20vh;
+    height: auto;
+    animation: mover-barco 4s linear infinite;
+    z-index: 2;
+  }
+
+  @keyframes mover-barco {
+    0%   { transform: translate(10vw, -50%) scaleX(-1); }
+    50%  { transform: translate(80vw, -50%) scaleX(-1); }
+    50.01% { transform: translate(80vw, -50%) scaleX(1); }
+    100% { transform: translate(10vw, -50%) scaleX(1); }
+  }
+
+  .nuvem {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 15vh;
+    height: auto;
+    animation: mover-nuvem 10s linear infinite;
+    z-index: 1;
+  }
+
+  @keyframes mover-nuvem {
+    0%   { transform: translateX(10vw); }
+    50%  { transform: translateX(80vw); }
+    100% { transform: translateX(10vw); }
+  }
+
+  .oceano {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #0b3d91;
+    animation: mover-oceano 3s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+
+  .cobrirOceano {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #0b3d91;
+
+  }
+
+  @keyframes mover-oceano {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <img class="barco" src="/94dd0d044efc77eb85b73a91be75415a-ilustracao-de-barco-historico-simples.png" alt="Barco">
+  <img class="nuvem" src="cute-cloud-simple-illustration-for-kids-drawing.png" alt="Nuvem">
+  <div class="oceano"></div>
+  <div class="cobrirOceano"></div>
+</body>
+</html>
