@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <style>
 
-        body:hover{
-            animation: rotacionar, infinite, 360deg, 5s;
+         
+        #bola5:hover{
+            animation: rotacionar 4s linear infinite;
 
         }
+
+        @keyframes rotacionar {
+            0%{ transform: rotate(0deg); }
+            100%{ transform: rotate(360deg); }
+
+        }
+
 
         #bola1{
             position: fixed;
@@ -22,6 +31,7 @@
             border-radius: 50%;
             top: 0%;
             left: 0%;
+            
 
         }
 
@@ -64,13 +74,16 @@
             width: 15vh;
             height: 15vh;
             background-color: lightyellow;
-            border-radius: 50%;
+            
             bottom: 0%;
             right: 0%;
 
         }
 
+       
     </style>
+
+
 
     <div id="bola1"></div>
     <div id="bola2"></div>

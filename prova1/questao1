@@ -1,0 +1,1 @@
+O usuario quando digita a url tem a informação levada ate um servidos dns que retorna o ip do usuario e com isso ele pode fazer requisições e com isso arquivos html, css e js são renderizados

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+
+*{
+    margin: 0;
+    border: 0;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 12vw 76vw 12vw;
+    grid-template-rows: 10vh 8vh 64vh 8vh 10vh;
+    grid-template-areas: 'header header header'
+                         'leftAside banner rigthAside'  
+                         'leftAside mainContent rigthAside'
+                         'leftAside lowContent rigthAside'
+                         'footer footer footer';
+}
+
+#header{
+    grid-area: header;
+    background-color: yellow;
+    color: black;
+
+}
+
+#banner{
+    grid-area: banner;
+    background-color: red;
+
+}
+
+#leftAside{
+    grid-area: leftAside;
+    background-color: green;
+
+}
+
+#rigthAside{
+    grid-area: rigthAside;
+    background-color: brown;
+
+}
+
+#mainContent{
+    grid-area: mainContent;
+    background-color: blue;
+
+}
+
+#lowContent{
+    grid-area: lowContent;
+    background-color:aquamarine ;
+    color: black;
+
+}
+
+#footer{
+    grid-area: footer;
+    background-color: blueviolet;
+
+}
+
+.box{
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media screen and (max-width: 437px){ 
+
+    .container{
+        grid-template-columns: 100vw;
+        grid-template-rows: 6vh 6vh 6vh 64vh 6vh 6vh 6vh;
+        grid-template-areas: 'header'
+                             'banner'  
+                             'leftAside'
+                             'mainContent'
+                             'rigthAside'
+                             'lowContent'
+                             'footer';
+        }
+
+    }
+    
+@media screen and (min-width: 437px){ 
+
+    .container{
+        grid-template-columns: 12vw 76vw 12vw;
+    grid-template-rows: 10vh 8vh 64vh 8vh 10vh;
+    grid-template-areas: 'header header header'
+                         'leftAside banner rigthAside'  
+                         'leftAside mainContent rigthAside'
+                         'leftAside lowContent rigthAside'
+                         'footer footer footer';
+
+    }
+
+}
+
+</style>
+
+<div class="container">
+    <div id="header" class="box">header</div>
+    <div id="leftAside" class="box">leftAside</div>
+    <div id="rigthAside" class="box">rigthAside</div>
+    <div id="banner" class="box">Banner</div>
+    <div id="mainContent" class="box">mainContent</div>
+    <div id="lowContent" class="box">lowContent</div>
+    <div id="footer" class="box">footer</div>
+</div>
+
+</body>
+</html>
