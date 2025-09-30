@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>wazap</h1>
+
+
+    <script>
+        let n = prompt("quantos wazap???")
+        n = parseInt(n)
+        for (let i = 0; i < n; i++) {
+            let w = document.createElement("p")
+            w.innerText = "wazap" + (i+1)
+            document.body.appendChild(w)
+            
+        }
+
+        document.body.style.display = "flex"
+        document.body.style.flexDirection = "row"
+        document.body.style.flexWrap = "wrap"
+        document.body.style.alignItems = "center"
+
+    </script>
+
+</body>
+</html>

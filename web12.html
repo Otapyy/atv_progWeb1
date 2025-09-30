@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Móvel</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        #laele {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    var contador = 0;
+
+    var receba = document.createElement('button');
+    receba.id = "laele";
+    receba.innerText = "Click: " + contador;
+    document.body.appendChild(receba);
+
+    const larguraBotao = 100;
+    const alturaBotao = 40;
+
+   
+    receba.style.left = (window.innerWidth / 2 - larguraBotao / 2) + "px";
+    receba.style.top = (window.innerHeight / 2 - alturaBotao / 2) + "px";
+
+    receba.addEventListener('click', function () {
+        contador++;
+        receba.innerText = contador > 1 ? "Clicks: " + contador : "Click: " + contador;
+
+        
+        var maxX = window.innerWidth - larguraBotao;
+        var maxY = window.innerHeight - alturaBotao;
+        var x = Math.floor(Math.random() * maxX);
+        var y = Math.floor(Math.random() * maxY);
+
+        
+        receba.style.left = x + "px";
+        receba.style.top = y + "px";
+    });
+</script>
+
+</body>
+</html>
