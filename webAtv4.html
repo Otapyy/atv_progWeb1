@@ -42,6 +42,8 @@
     </div>
 
     <button id="btnConfirmar">Confirmar!</button>
+
+    <p id="textoResultado"></p>
 </div>
 
     <script>
@@ -55,12 +57,14 @@
 
         if(campoNome.value == "" || campoAltura.value == "" || campoPeso.value == ""){
             alert("Preencha todos os campos!!!")
-            return
+            return                                                                                                                                                                                                                                     
 
         }
 
         var imc = 0
         imc = campoPeso.value / (campoAltura.value * campoAltura.value)
+        document.getElementById("textoResultado")
+        textoResultado.textContent = campoNome.value + " seu IMC é de: " + imc;
 
     })
     
