@@ -44,14 +44,18 @@
     <button id="btnConfirmar">Confirmar!</button>
 
     <p id="textoResultado"></p>
+
+    <img src="" id="imgResultado">
 </div>
 
     <script>
 
+    var imc = 0
     const campoNome = document.getElementById("campoNome")
     const campoPeso = document.getElementById("campoPeso")
     const campoAltura = document.getElementById("campoAltura")
     const btnConfirmar = document.getElementById("btnConfirmar")
+    const imgResultado = document.getElementById("imgResultado")
 
     btnConfirmar.addEventListener("click", function(){
 
@@ -61,12 +65,41 @@
 
         }
 
-        var imc = 0
-        imc = campoPeso.value / (campoAltura.value * campoAltura.value)
+        tipoImc = ""
+
+        peso = parseFloat(campoPeso.value)
+        altura = parseFloat(campoAltura.value)
+        
+        
+        imc = peso / (altura * altura)
         document.getElementById("textoResultado")
-        textoResultado.textContent = campoNome.value + " seu IMC é de: " + imc;
+        
+        if(imc < 18.5){
+            imgResultado.src = "imagens/abaixopeso.png"
+    
+
+        } else if (18.5 <= imc && imc < 24.9) {
+            imgResultado.src = "imagens/normal.png"
+            
+        } else if (25 <= imc && imc < 29.9) {
+            imgResultado.src = "imagens/sobrepeso.png"
+            
+        } else if (30 <= imc && imc < 34.9) {
+            imgResultado.src = "imagens/obesidade1.png"
+            
+        } else if (35 <= imc && imc < 39.9) {
+            imgResultado.src = "imagens/obesidade2.png"
+        } else if (imc > 40) {
+            imgResultado.src = "imagens/obesidade3.png"
+
+        }
+
+        textoResultado.textContent = campoNome.value + " seu IMC é de: " + imc.toFixed(2) ;
+
 
     })
+
+    
     
         
     </script>
