@@ -29,17 +29,17 @@
 <div id="container">
     <h1>Teste de IMC</h1>
 
-    <div>
+    
         <input id="campoNome" class="inputArea" type="text" placeholder="Nome">
-    </div>
+    
 
-    <div>
+    
         <input id="campoPeso" class="inputArea" type="text" placeholder="Peso(Kg)">
-    </div>
+    
 
-    <div>
+    
         <input id="campoAltura" class="inputArea" type = "text" placeholder="Altura(m)">
-    </div>
+    
 
     <button id="btnConfirmar">Confirmar!</button>
 
@@ -65,6 +65,12 @@
 
         }
 
+        if(campoAltura.value <= 0 || campoPeso.value <= 0){
+            alert("Altura e peso precisam ser diferentes de 0")
+            return                                                                                                                                                                                                                                     
+
+        }
+
         tipoImc = ""
 
         peso = parseFloat(campoPeso.value)
@@ -76,25 +82,30 @@
         
         if(imc < 18.5){
             imgResultado.src = "imagens/abaixopeso.png"
-    
+            tipoImc = "Baixo do peso"
 
         } else if (18.5 <= imc && imc < 24.9) {
             imgResultado.src = "imagens/normal.png"
+            tipoImc = "Peso normal"
             
         } else if (25 <= imc && imc < 29.9) {
             imgResultado.src = "imagens/sobrepeso.png"
+            tipoImc = "Sobrepeso"
             
         } else if (30 <= imc && imc < 34.9) {
             imgResultado.src = "imagens/obesidade1.png"
+            tipoImc = "Obesidade grau 1"
             
         } else if (35 <= imc && imc < 39.9) {
             imgResultado.src = "imagens/obesidade2.png"
+            tipoImc = "Obesidade grau 2"
         } else if (imc > 40) {
             imgResultado.src = "imagens/obesidade3.png"
+            tipoImc = "Obesidade grau 3"
 
         }
 
-        textoResultado.textContent = campoNome.value + " seu IMC é de: " + imc.toFixed(2) ;
+        textoResultado.textContent = campoNome.value + " seu IMC é de: " + imc.toFixed(2) + " - " + tipoImc ;
 
 
     })
