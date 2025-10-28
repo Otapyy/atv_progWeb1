@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        #container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .inputArea{
+            margin-bottom: 3vh;
+            
+        }
+    
+    </style>
+
+
+<div id="container">
+    <h1>Numeros primos entre dois valores</h1>
+
+    
+    <input id="campoMenorValor" class="inputArea" type="number" placeholder="Menor valor">
+
+    <input id="campoMaiorValor" class="inputArea" type="number" placeholder="Maior valor">
+
+    <button id="btnConfirmar">Descobrir</button>
+
+    <p id="textoResultado"></p>
+
+    <script>
+
+        const btnConfirmar = document.getElementById("btnConfirmar")
+        const campoMenorValor = document.getElementById("campoMenorValor")
+        const campoMaiorValor = document.getElementById("campoMaiorValor")
+
+        
+
+        btnConfirmar.addEventListener("click", function(){
+
+            let valorMaior = parseInt(campoMaiorValor.value)
+            let valorMenor = parseInt(campoMenorValor.value)
+
+            if (valorMaior < valorMenor) {
+                return; 
+            }
+            
+            for (let i = valorMenor; i <= valorMaior; i++) {
+                if (i === 1) continue;  
+
+                let primo = true;
+
+                for (let t = 2; t <= Math.sqrt(i); t++) {
+                    if (i % t === 0) {
+                        primo = false;
+                        break;
+                    }
+                }
+
+                if (primo) {
+                    console.log("Primo:", i);  
+                }
+}
+
+        })
+
+    </script>
+
+</div>
+
+
+
+</body>
+</html>
