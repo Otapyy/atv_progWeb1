@@ -3,7 +3,7 @@
 function connect_bd(){
     $servername = "localhost";
     $username = "root";
-    $password = "admin";
+    $password = "aluno";
     $dbname = "webti";
     return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 }
@@ -23,8 +23,6 @@ function deletarUsuario($id){
     $stmt->bindParam(":id", $id);
     return $stmt->execute();
 }
-
-//deletarUsuario(1);
 
 function updateUsuario($id, $nome, $login, $senha){
     $con = connect_bd();
@@ -60,6 +58,5 @@ function getUsuarios(){
 //echo"<pre>";
 //print_r(var_dump(getUsuarios()));
 //echo"</pre>";
-
 
 ?>

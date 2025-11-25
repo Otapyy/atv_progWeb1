@@ -18,7 +18,7 @@
         <input type="password" id="senha" require>
         <label for="login">Login:</label>
         <input type="text" id="login" require>
-        <input type="submit" value = "cadastrar">
+        <input type="submit" id = "btnCadastro" value = "cadastrar">
         </div>
 
     </form>
