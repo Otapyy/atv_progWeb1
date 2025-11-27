@@ -1,3 +1,4 @@
+//conexao.php
 <?php
 
 function connect_bd(){
@@ -49,7 +50,7 @@ function getUsuario($id){
 
 function getUsuarios(){
     $con = connect_bd();
-    $stmt = $con->prepare("SELECT * FROM usuarios");
+    $stmt = $con->prepare("SELECT * FROM usuarios ORDER BY id DESC");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 

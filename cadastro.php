@@ -8,19 +8,22 @@
 </head>
 <body>
 
-<div id = "container">
+<div id="container">
     <h1>Cadastro usuario</h1>
-    <form action="processaCadastro.php" method = "POST">
-        <div id = "containerInterno">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" require>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" require>
-        <label for="login">Login:</label>
-        <input type="text" id="login" require>
-        <input type="submit" id = "btnCadastro" value = "cadastrar">
-        </div>
+    <form action="processaCadastro.php" method="POST">
+        <div id="containerInterno">
 
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+
+            <input type="submit" id="btnCadastro" value="Cadastrar">
+        </div>
     </form>
 </div>
 

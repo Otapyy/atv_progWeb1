@@ -44,7 +44,10 @@ input {
     transition: all 0.3s ease;
 }
 
-#btnCadastro{
-    color: #5f3300;
-
+#btnCadastro {
+    background-color: #5f3300;
+    color: white;
+    border: 2px solid #3a1f00;
+    cursor: pointer;
+    transition: 0.3s;
 }
