@@ -9,18 +9,17 @@ body {
     background: #f5f5f5;
 }
 
-#containerTabela {
+#container {
     width: 28vw;
     height: 60vh; 
     margin-top: 2vh;
-    background-color:rgb(223, 223, 223);
+    background-color:rgb(255, 233, 215);
     color: #5f3300;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 7%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 #containerInterno {
@@ -45,7 +44,7 @@ input {
     transition: all 0.3s ease;
 }
 
-#btnCadastro {
+#btnLogin {
     background-color: #5f3300;
     color: white;
     border: 2px solid #3a1f00;
