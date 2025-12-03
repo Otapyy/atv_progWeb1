@@ -1,0 +1,1 @@
+//o php nao roda no navegador, ele roda no lado do servidor e retorna pode retornar html e derivados
