@@ -1,79 +1,127 @@
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
 
-    }
+}
 
-    #geral{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+#geral {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
 
-    }
+}
 
-    .container {
-        width: 40vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-    }
+.container {
+    width: 60vw;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
+}
 
-    }
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5f3300;
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
+}
 
-    }
+#formPesquisa {
+    width: 100%;
+    margin-bottom: 20px;
 
-    table th {
-        background: #907761;
-        color: rgb(240, 240, 240);
-        padding: 12px;
-        text-align: center; 
-        border: 1px solid #5f3300;
+}
 
-    }
+#containerPesquisa {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 
-    table td {
-        padding: 10px;
-        border: 1px solid #5f3300;
-        text-align: center;
-        vertical-align: middle;
-        
-    }
+}
 
-    table tr{
-        background: #fff9e1;
+#inputPesquisa {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid #5f3300;
+    border-radius: 8px;
+    background: #e3d7bf;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #333;
+
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #5f3300;
+    color: white;
+    border: 2px solid #3a1f00;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+
+}
+
+.btnSair {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+#mensagemVazio {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-top: 30px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+}
+
+table th {
+    background: #907761;
+    color: rgb(240, 240, 240);
+    padding: 12px;
+    text-align: center; 
+    border: 1px solid #5f3300;
+
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #5f3300;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+table tr {
+    background: #fff9e1;
+
+}
+
+table tr:nth-child(even) {
+    background: #e3d7bf;
+}
+
+table tr:hover {
+    background: #fffcef;
     
-    }
-
-    table tr:nth-child(even) {
-        background: #e3d7bf;
-
-    }
-
-    table tr:hover {
-        background: #fffcef;
-
-    }
-
-    a {
-        color: #ffb01c;
-        text-decoration: none;
-        font-weight: bold;
-
-    }
-
-    a:hover {
-        text-decoration: underline;
-
-    }
+}
