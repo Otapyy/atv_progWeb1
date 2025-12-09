@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+#geral{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+}
+
+.foto{
+    border-radius: 50%;
+    margin: 2vh;
+
+}
+
+#background{
+    background-color: gainsboro;
+    width: 30vw;
+    height: 70vh;
+    
+}

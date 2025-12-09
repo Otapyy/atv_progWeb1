@@ -1,0 +1,56 @@
+*{
+padding: 0;
+margin: 0;
+border: 0;
+
+}
+
+
+#geral{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#header{
+    background-color: greenyellow;
+    height: 20vh;
+    width: 100vw;
+
+}
+
+
+#article{
+    
+    height: 60vh;
+    width: 60vw;
+
+}
+
+#aside{
+    background-color:antiquewhite;
+    height: 60vh;
+    width: 20vw;
+
+}
+
+#nav{
+    background-color:green;
+    height: 60vh;
+    width: 20vw;
+
+}
+
+
+#footer{
+    background-color: greenyellow;
+    height: 20vh;
+    width: 100vw;
+
+}

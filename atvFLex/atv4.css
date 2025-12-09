@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+#geral{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.foto{
+    background-color: antiquewhite;
+    width: 6vw;
+    height: 40vh;
+    overflow-x: hidden;
+    margin: 0.5vw;
+    border-radius: 20px;
+    transition: 1s;
+    object-fit: cover;
+
+}
+
+.foto:hover{
+    flex-grow: 0.6;
+    transition: 1s;
+
+}
